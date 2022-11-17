@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import layout from "./assets/layout.png";
+import topLayout from "./assets/layoutTop.png";
+import botLayout from "./assets/layoutBot.png";
+import { BotLayout, Layer, TopLayout } from "./styles";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TopLayout src={topLayout} />
+      <Layer src={layout} />
+      <iframe
+        src="https://nwl-mobile.netlify.app/"
+        title="nwl"
+        style={{ height: 600 }}
+      />
+      <BotLayout src={botLayout} />
     </div>
   );
 }
-
-export default App;
