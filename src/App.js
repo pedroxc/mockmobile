@@ -2,19 +2,18 @@ import React from "react";
 import layout from "./assets/layout.png";
 import topLayout from "./assets/layoutTop.png";
 import botLayout from "./assets/layoutBot.png";
-import { BotLayout, Layer, TopLayout } from "./styles";
+import { Container, BotLayout, Layer, TopLayout, Frame } from "./styles";
 
 export default function App() {
+  const url = "https://nwl-mobile.netlify.app/";
   return (
-    <div>
-      <TopLayout src={topLayout} />
-      <Layer src={layout} />
-      <iframe
-        src="https://nwl-mobile.netlify.app/"
-        title="nwl"
-        style={{ height: 600 }}
-      />
-      <BotLayout src={botLayout} />
-    </div>
+    <Container>
+      <div>
+        <TopLayout src={topLayout} />
+        <Layer src={layout} />
+        <Frame src={url} title="nwl" />
+        <BotLayout src={botLayout} />
+      </div>
+    </Container>
   );
 }
